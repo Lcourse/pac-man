@@ -73,3 +73,11 @@ kbd {
     box-sizing: border-box;
 }
 
+.wall {
+    background-color: darkblue;
+}
+
+/* Preciso chamar os ícons através de uma URL gigantesca */
+.power pellet {
+
+}
