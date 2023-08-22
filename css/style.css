@@ -52,3 +52,11 @@ kbd {
     z-index: 100;
     cursor: pointer;
 }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px;
+    height: 560px;
+    margin-bottom: 80px;
+}
