@@ -60,3 +60,16 @@ kbd {
     height: 560px;
     margin-bottom: 80px;
 }
+
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.pac-dot {
+    background-color: rgba(247, 191, 80, 1.00);
+    border: 7px solid rgba(10, 7, 67, 1.00);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
