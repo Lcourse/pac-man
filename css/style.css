@@ -44,4 +44,11 @@ kbd {
     padding: 15px;
     color: rgba(10, 7, 67, 1.00);
     font-family: 'Bungee', cursive;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: rgba(246, 184, 30);
+    border: 2px solid rgba(239, 0, 0, 1.00);
+    z-index: 100;
+    cursor: pointer;
 }
