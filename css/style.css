@@ -26,4 +26,22 @@ h2 {
     font-size: 20px;
     font-weight: lighter;
     text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(239, 0, 0, 1.00);
+}
+
+#mobile {
+    display: none;
+}
+
+kbd {
+    font-size: 25px;
+    padding: 5px;
+}
+
+#play {
+    position: absolute;
+    margin-top: 80px;
+    padding: 15px;
+    color: rgba(10, 7, 67, 1.00);
+    font-family: 'Bungee', cursive;
 }
