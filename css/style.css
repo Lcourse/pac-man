@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(10, 7, 67, 1.00);
+    font-family: 'Bungee', cursive;
+}
+
+#logo {
+    width: 700px;
+}
+
+h2 {
+    margin: -30px auto 5px auto;
+    color: rgb(246, 184, 30);
+    font-size: 28px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-shadow: 1.5px 1.5px 0 rgba(239, 0, 0, 1.00);
+}
+
+#computer {
+    margin-bottom: 35px;
+    color: rgb(246, 184, 30);
+    font-size: 20px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
