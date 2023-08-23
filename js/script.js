@@ -240,7 +240,12 @@ class Ghost {
 }
 
 /* Configuração, cor dos fantasmas */
-const ghosts =
+const ghosts = {
+  new Ghost("blinky", 348 290),
+  new Ghost("blinky", 348 290),
+  new Ghost("blinky", 348 290),
+  new Ghost("blinky", 348 290),
+}
 
 }
 
