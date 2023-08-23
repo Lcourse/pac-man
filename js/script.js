@@ -119,6 +119,11 @@ function movePacman(e) {
         }
             break;
         case 40:
+            if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + width].classList.contains("wall") && !squares[pacmanCurrentIndex + width].classList.contains("ghost-lair")) {
+              pacmanCurrentIndex += width;
+              squares[pacmanCurrentIndex].style.transform = "rotate(190deg)";
+            }
+            break;
 
 
     }
