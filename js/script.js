@@ -39,7 +39,7 @@ document.getElementById("play").addEventListener("click", function game(){
     const squares = [];
 
     /* Posição inicial do PAC MAN */
-    function createBoard() {
+function createBoard() {
         for (let i = 0; i < layout.length; i++){
             const square = document.createElement("div");
             grid.appendChild(square);
@@ -63,4 +63,22 @@ document.getElementById("play").addEventListener("click", function game(){
 createBoard()
 
 /*Função de mostrar Pontuação ao usuário */
+function bestScoreCount() {
+    let higher;
+    let bestScore = window.localStorage.getItem(higher);
+    window.localStorage.setItem(bestScore, higher);
+    const bestScoreDisplay = document.getElementById("bestScore");
+    if(bestScore == nul) {
+       bestScore = score;
+       window.localStorage.setItem(higher, bestScore);
+       } else if (score < Number(window.localStorage.getItem(higher))) {
+            bestScore = score;
+       } else if (score > Number(window.localStorage.getItem(higher))) {
+            window.localStorage.clear();
+            bestScore = score;
+            window.localStorage.setItem(higher, bestScore);
+       }
+       bestScoreDisplay.innerHTML = window.localStorage.getItem(higher);
+    }
+    bestScoreCount();
 })
