@@ -107,3 +107,11 @@ kbd {
     border-radius: 0 !important;
     transform: rotate(0deg) !important;
 }
+
+.clyde {
+    content: url('');
+    border: 0;
+    background-color: transparent;
+    border-radius: 0 !important;
+    transform: rotate(0deg) !important;
+}
