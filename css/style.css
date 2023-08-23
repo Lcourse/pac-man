@@ -122,3 +122,10 @@ kbd {
     border-radius: 0;
     background-color: transparent;
 }
+
+.pac-man {
+    background-color: yellow;
+    border-radius: 10px;
+    border: none;
+    transform: rotate(115deg);
+}
