@@ -148,5 +148,8 @@ kbd {
     border-radius: 50px 0 0 0;
     background-color: yellow;
     transform-origin: bottom right;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-animation: eat .5s infinite;
 }
 
