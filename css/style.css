@@ -254,3 +254,25 @@ footer {
     bottom: 30px;
     z-index: -2;
 }
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1024px){
+    #computer {
+        color: transparent;
+        text-shadow: none;
+    }
+    #mobile {
+        display: block;
+        margin: -20px auto -5px auto;
+        color: rgb(246, 184, 30);
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 0 rgba(239, 0, 0, 1.00);
+    }
+}
+@media screen and (max-width: 670px){
+    
+}
