@@ -134,7 +134,20 @@ checkForGameOver();
 checkForWin();
 
 }
- 
+
+document.addEventListener("keydown", movePacman);
+
+var initialX = null;
+var initialY = null;
+
+function startTouch(e) {
+  initialX = e.touches[0].clientX;
+  initialY = e.touches[0].clientY;
+}
+
+function moveTouch(e) {
+  
+}
 
 }
 );
