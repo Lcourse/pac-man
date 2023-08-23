@@ -296,6 +296,16 @@ function moveGhost(ghost) {
 }
 
 function checkForGameOver() {
+  if (squares[pacmanCurrentIndex].classList.contains("ghost") && !squares[pacmanCurrentIndex].classList.contains("scared-ghost")) {
+    ghosts.forEach(ghost => clearInterval(ghost.timerId));
+    document.removeEventListener("keydown", movePacman);
+    bestScoreCount();
+    scoreDisplay.innerHTML = score;
+    let gameOver = document.createElement("div");
+    gameOver.classList.add("gameOver");
+    document.body.append(gameOver);
+    restartButton.classList.add("restart");
+  }
   
 }
 
