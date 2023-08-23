@@ -170,8 +170,26 @@ function moveTouch(e) {
               pacmanCurrentIndex = 391;
           }
         } else  {
-          
+          if (pacmanCurrentIndex % width < width -1 && !squares[pacmanCurrentIndex +1].classList.contains("wall") && !squares[pacmanCurrentIndex + 1].classList.contains("ghost-lair")) {
+            pacmanCurrentIndex += 1;
+            squares[pacmanCurrentIndex].style.transform = "scaleY(1) rotate(95deg)";
+            if (pacmanCurrentIndex + 1 === 392) {
+                pacmanCurrentIndex = 364;
+            }
+          }
         }
+    } else {
+      if (diffY > 0) {
+        if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - width].classList.contains("wall") && !squares[pacmanCurrentIndex - width].classList.contains("ghost-lair")) {
+          pacmanCurrentIndex -= width;
+          squares[pacmanCurrentIndex].style.transform = "scaleY(1)";
+        }
+      } else {
+        if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + width].classList.contains("wall") && !squares[pacmanCurrentIndex + width].classList.contains("ghost-lair")) {
+          pacmanCurrentIndex += width;
+          squares[pacmanCurrentIndex].style.transform = "rotate(190deg)";
+        }
+      }
     }
   }
   
