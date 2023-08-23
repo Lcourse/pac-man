@@ -205,3 +205,32 @@ kbd {
     display: flex;
     justify-content: center;
 }
+
+.gameOver::after {
+    content: "GAME OVER";
+    position: absolute;
+}
+
+.won::after {
+    content: "YOU WON !";
+}
+
+.restart {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    margin-top: 100px;
+    background-color: rgba(10, 7, 67, 1.00);
+    border: 2px solid rgba(239, 0, 0, 1.00);
+    border-radius: 5px;
+    z-index: 200;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bungee', cursive;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    color: rgb(246, 184, 30);
+    text-shadow: 1px 1px 0 rgba(239, 0, 0, 1.00);
+}
