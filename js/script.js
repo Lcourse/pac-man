@@ -191,7 +191,31 @@ function moveTouch(e) {
         }
       }
     }
+    /* Função que permite o PACMAN comer fantasmas, depois de comer a fruta */
+    squares[pacmanCurrentIndex].classList.add("pac-man");
+    initialX = null;
+    initialY = null;
+
+    e.preventDefault();
+
+    pacDotEaten();
+    powerPelletEaten();
+    checkForGameOver();
+    checkForWin();
+
   }
+
+  document.querySelector(".grid").addEventListener("touchstart", startTouch, false);
+  document.querySelector(".grid").addEventListener("touchmove", moveTouch, false);
+
+function pacDotEaten() {
+  if (squares[pacmanCurrentIndex].classList.contains("pac-dot")) {
+    score++;
+    toWin++;
+    squares[pacmanCurrentIndex].classList.remove("pac-dot");
+  }
+  scoreDisplay.innerHTML = score
+}
   
 }
 
