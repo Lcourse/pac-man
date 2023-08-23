@@ -124,14 +124,17 @@ function movePacman(e) {
               squares[pacmanCurrentIndex].style.transform = "rotate(190deg)";
             }
             break;
-
-
     }
 
+squares[pacmanCurrentIndex].classList.add("pac-man") 
+
+pacDotEaten();
+powerPelletEaten();
+checkForGameOver();
+checkForWin();
+
 }
-
-  
-
+ 
 
 }
 );
