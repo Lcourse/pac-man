@@ -10,4 +10,15 @@ document.getElementById("play").addEventListener("click", function game(){
         1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
     ]
     const squares = [];
+
+    /* Posição inicial do PAC MAN */
+    function createBoard() {
+        for (let i = 0; i < layout.length; i++){
+            const square = document.createElement("div");
+            grid.appendChild(square);
+            squares.push(square);
+            
+        }
+
+    }
 })
