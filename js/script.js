@@ -242,10 +242,20 @@ class Ghost {
 /* Configuração, cor dos fantasmas */
 const ghosts = {
   new Ghost("blinky", 348 290),
-  new Ghost("blinky", 348 290),
-  new Ghost("blinky", 348 290),
-  new Ghost("blinky", 348 290),
+  new Ghost("pinky", 376 380),
+  new Ghost("inky", 351 200),
+  new Ghost("clyde", 379 250)
 }
+
+function unScareGhosts() {ghosts.forEach(ghost => ghost.isScared = false)}
+
+ghosts.forEach(ghost => {
+  squares[ghost.currentIndex].classList.add(ghost.className);
+  squares[ghost.currentIndex].classList.add("ghost");
+})
+
+/* Movimentação dos Fantasmas*/
+ghosts.forEach(ghost => moveGhost(ghost));
 
 }
 
