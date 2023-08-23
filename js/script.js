@@ -295,7 +295,7 @@ function moveGhost(ghost) {
 
 }
 
-/*Função que verfica quando dá Game Over */
+/*Função que verifica quando dá Game Over */
 function checkForGameOver() {
   if (squares[pacmanCurrentIndex].classList.contains("ghost") && !squares[pacmanCurrentIndex].classList.contains("scared-ghost")) {
     ghosts.forEach(ghost => clearInterval(ghost.timerId));
@@ -311,13 +311,22 @@ function checkForGameOver() {
     restartButton.addEventListener("click", () => (window.location.reload(false)))
   }  
 }
-
+/* Função que verifica se houve vitória */
 function checkForWin() {
-  
-}
+  if (toWin === 372) {
+    ghosts.forEach(ghost => clearInterval(ghost.timerId));
+    document.removeEventListener("keydown", movePacman);
+    bestScoreCount();
+    scoreDisplay.innerHTML = score;
+    let youWon = document.createElement("div");
+    youWon.classList.add("won");
+    document.body.append(youWon);
+    restartButton.classList.add("restart");
+    document.body.append(restartButton);
+    document.getElementById("play").removeEventListener("click", game);
+    restartButton.addEventListener("click", () => (window.location.reload(false)))
+      }
+    }
+  }
+});
 
-
-}
-
-}
-);
