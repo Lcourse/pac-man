@@ -83,4 +83,17 @@ document.getElementById("play").addEventListener("click", function game() {
     bestScoreDisplay.innerHTML = window.localStorage.getItem(higher);
   }
   bestScoreCount();
-});
+
+let pacmanCurrentIndex = 518;
+squares[pacmanCurrentIndex].classList.add("pac-man");
+
+/* Função de mover o PAC MAN */
+function movePacman(e) {
+
+}
+
+  
+
+
+}
+);
