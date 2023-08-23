@@ -146,6 +146,34 @@ function startTouch(e) {
 }
 
 function moveTouch(e) {
+  if (initialX === null) {
+    return;
+  }
+  if (initialY === null) {
+    return;
+  }
+
+  var currentX = e.touches[0].clientX;
+  var currentY = e.touches[0].clientY;
+  var diffX = initialX - currentX;
+  var diffY = initialY - currentY;
+
+  squares[pacmanCurrentIndex].classList.remove("pac-man");
+
+  if (Math.abs(diffX) > Math.abs(diffY)) {
+    if (diffX > 0) {
+
+        if(pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains("wall") && !squares[pacmanCurrentIndex -1].classList.contains("ghost-lair")) {
+          pacmanCurrentIndex -= 1;
+          squares[pacmanCurrentIndex].style.transform = "scaleX(-1) rotate(95deg)";
+          if (pacmanCurrentIndex - 1 === 363) {
+              pacmanCurrentIndex = 391;
+          }
+        } else  {
+          
+        }
+    }
+  }
   
 }
 
