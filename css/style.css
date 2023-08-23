@@ -129,3 +129,21 @@ kbd {
     border: none;
     transform: rotate(115deg);
 }
+
+.pac-man::before, .pac-man::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+
+.pac-man::before {
+    border-radius: 50px 0 0 0;
+    background-color: rgba(10, 7, 67, 1.00);
+    border-color: rgba(10, 7, 67, 1.00);
+}
+
+.pac-man::after {
+    
+}
