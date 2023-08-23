@@ -89,6 +89,25 @@ squares[pacmanCurrentIndex].classList.add("pac-man");
 
 /* Função de mover o PAC MAN */
 function movePacman(e) {
+    squares[pacmanCurrentIndex].classList.remove("pac-man");
+    switch (e.keycode) {
+        case 37:
+            if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex -1].classList.contains("wall") && !squares[pacmanCurrentIndex -1].classList.contains("ghost-lair")) {
+                pacmanCurrentIndex -= 1;
+                squares[pacmanCurrentIndex].style.transform = "scaleX(-1) rotate(95deg)";
+
+                if (pacmanCurrentIndex -1 === 363) {
+                    pacmanCurrentIndex = 391
+                }
+            }
+            break;
+        case 38: 
+        if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - width].classList.contains("wall") && !squares[pacmanCurrentIndex - width].classList.contains("ghost-lair")) {
+            pacmanCurrentIndex -= width;
+            squares[pacmanCurrentIndex].style.transform = "scaleY(1)"
+        }
+           
+    }
 
 }
 
