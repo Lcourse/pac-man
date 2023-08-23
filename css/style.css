@@ -157,3 +157,13 @@ kbd {
     background-position: center;
 }
 
+@-webkit-keyframes eat {
+    0% {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+    25% {
+
+    }
+}
+
