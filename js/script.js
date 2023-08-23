@@ -216,6 +216,21 @@ function pacDotEaten() {
   }
   scoreDisplay.innerHTML = score
 }
+
+function powerPelletEaten() {
+  if (squares[pacmanCurrentIndex].classList("power-pellet")) {
+    score += 10;
+    toWin += 10;
+    ghosts.forEach(ghost.isScared = true);
+    setTimeout(unScareGhosts, 7000);
+    squares[pacmanCurrentIndex].classList.remove("power-pellet");
+  }
+  scoreDisplay.innerHTML = score;
+}
+
+class Ghost {
+  
+}
   
 }
 
