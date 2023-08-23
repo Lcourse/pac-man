@@ -151,5 +151,9 @@ kbd {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     -webkit-animation: eat .5s infinite;
+    background-image: url('');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
