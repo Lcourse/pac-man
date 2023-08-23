@@ -106,7 +106,21 @@ function movePacman(e) {
             pacmanCurrentIndex -= width;
             squares[pacmanCurrentIndex].style.transform = "scaleY(1)"
         }
-           
+            break;
+        case 39:
+        if (pacmanCurrentIndex % width < width -1 && !squares[pacmanCurrentIndex + 1].classList.contains("wall") && !squares[pacmanCurrentIndex + 1].classList.contains("ghost-lair"))    
+        {
+            pacmanCurrentIndex += 1;
+            squares[pacmanCurrentIndex].style.transform = "scaleY(1) rotate(95deg)";
+
+            if (pacmanCurrentIndex + 1 === 392) {
+                pacmanCurrentIndex = 364;
+            }
+        }
+            break;
+        case 40:
+
+
     }
 
 }
