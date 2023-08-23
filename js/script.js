@@ -295,6 +295,7 @@ function moveGhost(ghost) {
 
 }
 
+/*Função que verfica quando dá Game Over */
 function checkForGameOver() {
   if (squares[pacmanCurrentIndex].classList.contains("ghost") && !squares[pacmanCurrentIndex].classList.contains("scared-ghost")) {
     ghosts.forEach(ghost => clearInterval(ghost.timerId));
@@ -305,7 +306,13 @@ function checkForGameOver() {
     gameOver.classList.add("gameOver");
     document.body.append(gameOver);
     restartButton.classList.add("restart");
-  }
+    document.body.append(restartButton);
+    document.getElementById("play").removeEventListener("click", game);
+    restartButton.addEventListener("click", () => (window.location.reload(false)))
+  }  
+}
+
+function checkForWin() {
   
 }
 
